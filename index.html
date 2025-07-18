@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none; /* 去除下划线 */
+        }
+        .nav-container {
+            display: flex;          /* 启用Flex布局 */
+            flex-direction: row;    /* 子元素横向排列 */
+            align-items: center;    /* 垂直居中 */
+        }
+       .daohanglan{
+            background-color: #E1FFFF; /* 设置背景颜色 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 设置阴影 */
+            padding: 10px 20px;     /* 增加内边距 */
+            flex: 1;                /* 子元素等分剩余空间 */
+        }
+        .no-underline {
+            text-align: center;      /* 设置文本居中 */
+            flex: 0 0 auto;        /* 防止伸缩，保持原始宽度 */
+            font-size: 20px; 
+            color: #c1b4ff; 
+            margin-top: 0.01px;
+        }
+        .profile_picture{
+            width: 70px;
+            display: flex;          /* 启用Flex布局 */
+            flex-direction: row;    /* 子元素横向排列 */
+            padding: 1px;          /* 设置内边距 */
+            margin: 5px;           /* 设置外边距 */
+            border-radius: 5px;     /* 设置圆角 */
+                         /* 子元素等分剩余空间 */
+        }
+        .qq-link:hover img {
+            transform: scale(1.1); /* 悬停时放大效果 */
+        }
+        .qq-link:hover .no-underline {
+            color: #de88b7;        /* 悬停时颜色变化 */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 1px auto;
+            padding: 1px;
+        }
+       
+    </style>
+</head>
+<body> 
+
+ <div class="daohanglan" >
+    <div class="nav-container">
+        <a href="tencent://message/?uin=1101101101&Site=&Menu=yes" target="_blank" class="qq-link" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+            <img src="profile_picture.jpg" alt="QQ" class="profile_picture">
+            <p class="no-underline" >
+                <b>我的QQ
+            </p>
+        </a>
+
+    </div>
+ </div>
+
+
+
+</body>
+</html>
