@@ -1,0 +1,97 @@
+/* 头部导航栏样式 */
+.header_nav {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* 头像容器 */
+.avatar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 气泡文字样式 */
+.bubble-text {
+  position: absolute;
+  bottom: 110%; /* 位于头像上方 */
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: bubbleFade 5s ease-in-out forwards;
+  z-index: 10;
+  font-weight: 500;
+}
+
+/* 气泡文字动画 */
+@keyframes bubbleFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+}
+
+/* 气泡文字的小三角形 */
+.bubble-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+}
+
+/* 头像图片样式 */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* 占位背景色 */
+}
+/* 导航链接样式 */
+.nav_links {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  align-items: center; /* 垂直居中对齐 */
+  height: 100%;
+}
+.nav_links a {
+  color: white;
+  height: 50%;
+  flex: 1; /* 平分可用空间 */
+  text-align: center; /* 文字居中 */
+  /* 添加过渡效果 */
+  transition: all 0.3s ease; /* 添加渐变过渡 */
+  padding: 10px 0; /* 垂直内边距 */
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+.nav_links a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* 悬停时的背景色 */
+  border-radius: 5px; /* 添加圆角 */
+  transform: translateY(-2px); /* 轻微上移效果 */
+}

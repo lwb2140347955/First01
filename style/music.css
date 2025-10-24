@@ -1,0 +1,75 @@
+/* 音乐播放器容器 */
+.music-player-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: fit-content;
+  z-index: 20; /* 确保在其他元素之上 */
+}
+/* 音乐播放器气泡文字样式 */
+.music-bubble-text {
+  position: absolute;
+  bottom: 100%; /* 位于容器上方 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: musicBubbleFade 6s ease-in-out 1s forwards;
+  z-index: 25;
+  font-weight: 500;
+  margin-bottom: 10px; /* 与播放器保持距离 */
+}
+
+/* 音乐播放器气泡文字动画 */
+@keyframes musicBubbleFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.8);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px) scale(0.9);
+  }
+}
+
+/* 音乐播放器气泡文字的小三角形 */
+.music-bubble-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+}
+
+/* 音乐播放器样式 */
+.music-player {
+  width: 200px; /* 与侧边栏宽度一致 */
+  padding: 15px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(175, 124, 124, 0.3);
+  box-sizing: border-box;
+}
+
+.music-player audio {
+  width: 100%;
+  outline: none;
+}

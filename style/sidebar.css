@@ -1,0 +1,54 @@
+/* 侧边栏样式 */
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  height: calc(100% - 130px); /* 减去头部高度 */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+/* 添加动态背景效果 */
+.sidebar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+/* 悬停时触发动画 */
+.sidebar a:hover::before {
+  left: 0;
+}
+
+/* 悬停时的文字效果 */
+.sidebar a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
