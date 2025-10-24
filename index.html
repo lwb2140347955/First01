@@ -3,145 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="picture/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="picture/favicon.ico" />
 
-    <style>
-      a {
-        text-decoration: none;
-      }
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/music.css" />
+    <link rel="stylesheet" href="style/head.css" />
+    <link rel="stylesheet" href="style/sidebar.css" />
+    <link rel="stylesheet" href="style/main_content.css" />
 
-      .background_img {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-
-      .main_manager {
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        background-color: rgba(175, 124, 124, 0.445);
-        backdrop-filter: blur(3px);
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column; /* 垂直排列 */
-        min-height: 80vh; /* 设置最小高度 */
-      }
-
-      /* 头部导航栏样式 */
-      .header_nav {
-        display: flex;
-        align-items: center;
-        padding: 15px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      }
-      /* 头像图片样式 */
-      .avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-right: 15px;
-        background-color: rgba(255, 255, 255, 0.2); /* 占位背景色 */
-      }
-      /* 导航链接样式 */
-      .nav_links {
-        flex: 1;
-        display: flex;
-        gap: 20px;
-      }
-      .nav_links a {
-        flex: 1; /* 平分可用空间 */
-        text-align: center; /* 文字居中 */
-        /* 添加过渡效果 */
-        transition: all 0.3s ease; /* 添加渐变过渡 */
-        padding: 10px 0; /* 增加一些内边距使效果更明显 */
-      }
-      .nav_links a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* 悬停时的背景色 */
-        border-radius: 5px; /* 可选：添加圆角 */
-        transform: translateY(-2px); /* 可选：轻微上移效果 */
-      }
-
-      /* 菜单项样式 */
-      .content_wrapper {
-        display: flex;
-        flex: 1;
-        position: relative;
-      }
-
-      /* 侧边栏样式 */
-      .sidebar {
-        width: 200px;
-        padding: 20px;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        height: calc(100% - 130px); /* 减去头部高度 */
-      }
-
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .sidebar li {
-        padding: 10px 0;
-        flex: 1;
-      }
-
-      .sidebar a {
-        color: white;
-        display: block;
-      }
-
-      /* 音乐播放器样式 */
-      .music-player {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 200px; /* 与侧边栏宽度一致 */
-        padding: 15px 20px;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        background-color: rgba(175, 124, 124, 0.3);
-        box-sizing: border-box;
-      }
-
-      .music-player audio {
-        width: 100%;
-        outline: none;
-      }
-
-      /* 主内容区域 */
-      .main_content {
-        flex: 1;
-        padding: 20px;
-        height: calc(100% - 130px); /* 减去头部高度 */
-      }
-    </style>
     <title>你好！世界</title>
   </head>
   <body>
-    <img src="background.png" class="background_img" />
+    <img src="picture/background.png" class="background_img" />
     <div class="main_manager">
       <div class="header_nav">
-        <div class="avatar">
-          <img
-            class="avatar"
-            src="https://shared.st.dl.eccdnx.com/community_assets/images/items/400910/8d405acf455855d778515064e91880c67fffff50.gif
+        <div class="avatar-container">
+          <div class="bubble-text">欢迎访问我的博客！</div>
+          <div class="avatar">
+            <img
+              class="avatar"
+              src="https://shared.st.dl.eccdnx.com/community_assets/images/items/400910/8d405acf455855d778515064e91880c67fffff50.gif
 "
-          />
+            />
+          </div>
         </div>
         <div class="nav_links">
           <a href="#">首页</a>
           <a href="#">关于</a>
+          <a href="#">联系</a>
+          <a href="#">联系</a>
           <a href="#">联系</a>
         </div>
       </div>
@@ -161,11 +52,14 @@
         </div>
 
         <!-- 音乐播放器区域 -->
-        <div class="music-player">
-          <audio controls>
-            <source src="music.mp3" type="audio/mpeg" />
-            您的浏览器不支持音频播放。
-          </audio>
+        <div class="music-player-container">
+          <div class="music-bubble-text">点击播放音乐 ♪</div>
+          <div class="music-player">
+            <audio controls>
+              <source src="music/music.mp3" type="audio/mpeg" />
+              您的浏览器不支持音频播放。
+            </audio>
+          </div>
         </div>
 
         <!-- 主内容区域 -->
@@ -174,5 +68,10 @@
         </div>
       </div>
     </div>
+
+    <script src="script/sidebar_script.js"></script>
+    <script src="script/head_bubble.js"></script>
+    <script src="script/music_bubble.js"></script>
+    <script src="script/music_control.js"></script>
   </body>
 </html>
