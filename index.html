@@ -7,6 +7,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="picture/favicon.ico" />
 
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/img.css" />
+    <link rel="stylesheet" href="style/time.css" />
     <link rel="stylesheet" href="style/music.css" />
     <link rel="stylesheet" href="style/head.css" />
     <link rel="stylesheet" href="style/sidebar.css" />
@@ -19,7 +21,7 @@
     <div class="main_manager">
       <div class="header_nav">
         <div class="avatar-container">
-          <div class="bubble-text">欢迎访问我的博客！</div>
+          <div class="bubble-text">欢迎访问我的网站！</div>
           <div class="avatar">
             <img
               class="avatar"
@@ -32,8 +34,8 @@
           <a href="#">首页</a>
           <a href="#">关于</a>
           <a href="#">联系</a>
-          <a href="#">联系</a>
-          <a href="#">联系</a>
+          <a href="#">待扩展项目1</a>
+          <a href="#">待扩展项目2</a>
         </div>
       </div>
       <!-- 内容区域 -->
@@ -46,8 +48,8 @@
             <li><a href="#">收藏夹</a></li>
             <li><a href="#">设置</a></li>
             <!-- 扩展项目占位 -->
-            <li><a href="#">扩展项目1</a></li>
-            <li><a href="#">扩展项目2</a></li>
+            <li><a href="#">待扩展项目1</a></li>
+            <li><a href="#">待扩展项目2</a></li>
           </ul>
         </div>
 
@@ -64,11 +66,29 @@
 
         <!-- 主内容区域 -->
         <div class="main_content">
-          <p style="color: white; text-align: center">欢迎来到我的博客！</p>
+          <div>
+            <h2 style="text-align: center; margin-bottom: 30px">
+              欢迎来到我的网站
+            </h2>
+            <div style="text-align: center; padding: 20px">
+              <p>这是一个完全静态的个人网站</p>
+              <p>您可以在这里浏览文章、收藏链接、播放音乐等</p>
+              <p>点击左侧导航栏或顶部菜单来浏览不同页面</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="time-container">
+      <div class="time-display" id="current-time">00:00:00</div>
+      <div class="date-display" id="current-date">0000年00月00日</div>
+    </div>
 
+    <div class="gif_img">
+      <img src="picture/lonely.gif" />
+    </div>
+
+    <script src="script/time.js"></script>
     <script src="script/sidebar_script.js"></script>
     <script src="script/head_bubble.js"></script>
     <script src="script/music_bubble.js"></script>
