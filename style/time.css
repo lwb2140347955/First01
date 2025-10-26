@@ -1,0 +1,39 @@
+/* 时间显示容器样式 */
+.time-container {
+  position: fixed; /* 固定定位，相对于浏览器窗口 */
+  top: 20px; /* 距离顶部20px */
+  right: 20px; /* 距离右边20px */
+  z-index: 9999; /* 高层级，确保在其他元素之上 */
+  background-color: transparent; /* 透明背景 */
+  color: white; /* 白色文字 */
+  padding: 10px 15px; /* 内边距 */
+  border-radius: 10px; /* 圆角 */
+  font-size: 45px; /* 字体大小 */
+  text-align: center; /* 文字居中 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+  pointer-events: none; /* 禁用鼠标事件，避免影响页面交互 */
+  pointer-events: none; /* 禁用鼠标事件，避免影响页面交互 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影以增强可读性 */
+}
+
+/* 时间显示文字样式 */
+.time-display {
+  font-family: "Courier New", monospace; /* 默认等宽字体 */
+  font-weight: bold; /* 粗体 */
+  margin: 0; /* 清除外边距 */
+  padding: 0; /* 清除内边距 */
+}
+
+/* 日期显示样式 */
+.date-display {
+  display: none; /* 隐藏日期显示 */
+}
+
+/* 响应式设计 - 在小屏幕上调整位置 */
+@media (max-width: 768px) {
+  .time-container {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+  }
+}
