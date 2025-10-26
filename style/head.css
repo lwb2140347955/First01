@@ -95,3 +95,48 @@
   border-radius: 5px; /* 添加圆角 */
   transform: translateY(-2px); /* 轻微上移效果 */
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .header_nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .avatar-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .bubble-text {
+    position: static;
+    transform: none;
+    animation: none;
+    margin-right: 10px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .bubble-text::after {
+    display: none;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .nav_links {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .nav_links a {
+    height: auto;
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+}

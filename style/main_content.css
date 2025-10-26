@@ -25,3 +25,27 @@
 .main_content::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .main_content {
+    padding: 15px;
+    height: auto;
+    flex: 1;
+  }
+
+  /* 适配文章和收藏页面 */
+  #articles-container,
+  #favorites-container {
+    padding: 0 5px;
+  }
+
+  .contact-item {
+    padding: 10px;
+  }
+
+  .profile-content .avatar img {
+    width: 80px;
+    height: 80px;
+  }
+}

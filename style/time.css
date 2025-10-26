@@ -29,11 +29,20 @@
   display: none; /* 隐藏日期显示 */
 }
 
-/* 响应式设计 - 在小屏幕上调整位置 */
+/* 移动端适配 */
 @media (max-width: 768px) {
   .time-container {
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 32px;
+    padding: 5px 10px;
+  }
+
+  @media (max-width: 480px) {
+    .time-container {
+      font-size: 24px;
+      top: 5px;
+      right: 5px;
+    }
   }
 }

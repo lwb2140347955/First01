@@ -9,3 +9,65 @@ a {
   position: relative;
   overflow: hidden;
 }
+
+.main_manager {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: rgba(175, 124, 124, 0.445);
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  height: 80vh; /* 设置最小高度 */
+  max-height: 80vh;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .main_manager {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .content_wrapper {
+    flex-direction: column;
+  }
+
+  .header_nav {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .avatar-container {
+    margin-bottom: 10px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .bubble-text {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .nav_links {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav_links a {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+}
